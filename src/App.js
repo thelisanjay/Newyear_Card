@@ -9,7 +9,7 @@ import PartyConeBomb from './componets/PartyConeBomb';
 import './App.css';
 
 function App() {
-  const [isCountdownComplete, setIsCountdownComplete] = useState(false);
+  const [isCountdownComplete, setIsCountdownComplete] = useState(true);
   const controls = useAnimation();
   const celebrateRef = useRef(null);
 
@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-4 overflow-hidden relative">
-        <AnimatedText text={isCountdownComplete ? "Happy New Year 2025!" : "Countdown to 2025!"} />
+        <AnimatedText text={isCountdownComplete ? "కొత్త సంవత్సరంలో కొత్త ఆశలు, కొత్త సంకల్పాలు, విజయాల పంట పండనీ!" : "Countdown to 2025!"} />
         {!isCountdownComplete && <Countdown onComplete={handleCountdownComplete} />}
         <motion.div
           ref={celebrateRef}

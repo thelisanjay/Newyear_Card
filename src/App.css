@@ -63,6 +63,28 @@
 .relative {
   position: relative;
 }
+.party-bomb {
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  font-size: 3rem;
+  z-index: 10;
+  transition: transform 0.3s;
+}
+
+.left-bomb {
+  left: 20px;
+}
+
+.right-bomb {
+  right: 20px;
+  
+}
+
+.party-bomb:hover {
+  transform: scale(1.2);
+}
+
 
 @media (min-width: 768px) {
   .md\:text-4xl {
@@ -70,4 +92,5 @@
     line-height: 2.5rem;
   }
 }
+
 
