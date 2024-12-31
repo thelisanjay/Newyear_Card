@@ -37,8 +37,14 @@ function App() {
   return (
     <div className="App">
       <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-4 overflow-hidden relative">
-        <AnimatedText text={isCountdownComplete ? "కొత్త సంవత్సరంలో కొత్త ఆశలు, కొత్త సంకల్పాలు, విజయాల పంట పండనీ!" : "Countdown to 2025!"} />
-        {!isCountdownComplete && <Countdown onComplete={handleCountdownComplete} />}
+      <AnimatedText
+  text={isCountdownComplete
+    ? "కొత్త సంవత్సరంలో\nకొత్త ఆశలు, \nకొత్త సంకల్పాలు,\nవిజయాల పంట \nపండనీ!"
+    : "Countdown to 2025!"
+  }
+  className="text-lg md:text-2xl lg:text-3xl text-center leading-tight px-4"
+  style={{ whiteSpace: 'pre-line' }}
+/>        {!isCountdownComplete && <Countdown onComplete={handleCountdownComplete} />}
         <motion.div
           ref={celebrateRef}
           className="text-2xl md:text-4xl text-white text-center mb-8"

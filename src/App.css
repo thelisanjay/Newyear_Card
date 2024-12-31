@@ -93,4 +93,20 @@
   }
 }
 
+/* In your CSS file */
+@media (max-width: 300px) {
+  .animated-text {
+    font-size: 1 rem; /* Adjust text size for smaller screens */
+    line-height: 1.4;   /* Control line height for mobile */
+    text-align: center;  /* Ensure the text is centered */
+  }
+}
+
+@media (min-width: 401px) {
+  .animated-text {
+    font-size: 1.5rem;  /* Larger text for desktops and tablets */
+    line-height: 1.6rem;
+  }
+}
+
 
