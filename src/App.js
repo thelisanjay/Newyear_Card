@@ -9,7 +9,7 @@ import PartyConeBomb from './componets/PartyConeBomb';
 import './App.css';
 
 function App() {
-  const [isCountdownComplete, setIsCountdownComplete] = useState(true);
+  const [isCountdownComplete, setIsCountdownComplete] = useState(false);
   const controls = useAnimation();
   const celebrateRef = useRef(null);
 
