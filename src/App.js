@@ -1,14 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import gsap from 'gsap';
-import { AnimatedText } from './componets/AnimatedText';  
+import { AnimatedText } from './componets/AnimatedText';
 import { Countdown } from './componets/Countdown';
 import { Fireworks } from './componets/Fireworks';
 import { Confetti } from './componets/Confetti';
+import PartyConeBomb from './componets/PartyConeBomb';
 import './App.css';
 
 function App() {
-  const [isCountdownComplete, setIsCountdownComplete] = useState(false);
+  const [isCountdownComplete, setIsCountdownComplete] = useState(true);
   const controls = useAnimation();
   const celebrateRef = useRef(null);
 
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-4 overflow-hidden">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-4 overflow-hidden relative">
         <AnimatedText text={isCountdownComplete ? "Happy New Year 2025!" : "Countdown to 2025!"} />
         {!isCountdownComplete && <Countdown onComplete={handleCountdownComplete} />}
         <motion.div
@@ -46,6 +47,8 @@ function App() {
         </motion.div>
         <Fireworks />
         <Confetti isActive={!isCountdownComplete} />
+        <PartyConeBomb position="left" />
+        <PartyConeBomb position="right" />
       </main>
     </div>
   );

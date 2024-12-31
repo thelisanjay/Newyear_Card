@@ -35,12 +35,12 @@ export function Confetti({ isActive }) {
   }, [isConfettiActive]);
 
   return (
-    <button
-      className="fixed bottom-4 right-4 bg-white text-purple-500 px-4 py-2 rounded-full shadow-lg hover:bg-purple-100 transition-colors"
-      onClick={() => setIsConfettiActive(prev => !prev)}
-    >
-      {isConfettiActive ? 'Stop Confetti' : 'Start Confetti'}
-    </button>
+    <div>
+      {isConfettiActive }
+    </div>
+    
+      
+    
   );
 }
 
